@@ -1,0 +1,18 @@
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters" *ngFor=" let ind = index; let section of sections;">
+      <!-- sample -->
+      <div *ngIf="ind%2 == 0" class="col-lg-6 order-lg-2 text-white showcase-img"
+      [ngStyle]="{'background-image': section.img}"></div>
+      <div *ngIf="ind%2 == 0" class="col-lg-6 order-lg-1 my-auto showcase-text">
+        <h2>{{ section.title }}</h2>
+        <p class="lead mb-0">{{ section.description }}</p>
+      </div>
+      <div *ngIf="ind%2 == 1" class="col-lg-6 text-white showcase-img" [ngStyle]="{'background-image': section.img}"></div>
+      <div *ngIf="ind%2 == 1" class="col-lg-6 my-auto showcase-text">
+        <h2>{{ section.title }}</h2>
+        <p class="lead mb-0">{{ section.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
